@@ -1,0 +1,9 @@
+image: ubuntu
+build_script:
+    - sudo apt-get update
+    - sudo apt-get install -y python3-pip
+    - sudo pip3 install -i http://pypi.douban.com/simple/ flask
+    - sudo pip3 install -i http://pypi.douban.com/simple/ requests
+    - sudo pip3 install -i http://pypi.douban.com/simple/ gunicorn
+    - mv $RESOURCE/* .
+run: gunicorn -w 4 -b 0.0.0.0:9100 main:app
