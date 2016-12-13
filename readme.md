@@ -105,6 +105,12 @@
 
     http://7xivot.com1.z0.glb.clouddn.com/fonts/full/方正准圆_GBK?qhash/md5
 
+也可上传后自动异步触发或对已有资源异步触发。其他使用方式可参见七牛文档
+
+	http://developer.qiniu.com/article/developer/persistent-fop.html
+
+
+
 ## 我的示例
 
 本文件夹下包含一个示例程序。可计算文件前多少字节的摘要。byte数可选，默认256kb，最大4M；算法可选，默认MD5，可选SHA1、SHA256。
